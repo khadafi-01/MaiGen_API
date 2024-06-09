@@ -1,0 +1,6 @@
+/node_modules
+.env
+/docs
+.sequelizerc
+package-lock.json
+README.MD
