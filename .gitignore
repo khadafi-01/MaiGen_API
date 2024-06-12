@@ -4,3 +4,11 @@
 .sequelizerc
 package-lock.json
 README.MD
+/handlers/profileController.js
+/handlers/destinationsController.js
+/config/serviceAccountKey.json
+/database/migrations/20240605035507-create-users.js
+recommender_model.tflite
+/routes/desitnationRoute.js
+/services/inferenceService.js
+/services/loadModel.js

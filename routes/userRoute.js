@@ -1,14 +1,18 @@
 // route untuk otentikasi dan profil pengguna dalam aplikasi.
-const { signup, login, logout } = require('../controllers/authController');
-const { authenticate, getProfile, updateProfile, deleteProfile } = require('../controllers/profileController');
 
-const router = require('express').Router();
+const { signup, login, logout } = require("../handlers/authController");
+const {
+    getProfile,
+    updateProfile,
+    deleteProfile,
+} = require("../handlers/profileController");
+const { authenticate } = require("../middleware/authMiddleware");
+const express = require("express");
+const router = express.Router();
 
-router.route('/signup').post(signup)
-router.route('/login').post(login);
-router.route('/logout').post(logout);
-router.route('/profile').get(authenticate, getProfile);
-router.route('/profile').put(authenticate, updateProfile)
-router.route('/profile').delete(authenticate, deleteProfile);
+router.post("/signup", signup);
+router.post("/login", login);
+router.post("/logout", logout);
+
 
 module.exports = router;
