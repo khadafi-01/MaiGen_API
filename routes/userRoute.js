@@ -14,5 +14,8 @@ router.post("/signup", signup);
 router.post("/login", login);
 router.post("/logout", logout);
 
+router.get('/profile', authenticate, getProfile);
+router.put('/profile', authenticate, updateProfile);
+router.delete('/profile', authenticate, deleteProfile);
 
 module.exports = router;
